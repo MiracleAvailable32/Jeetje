@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Roblox Toolkit",
+  "version": "1.0",
+  "description": "Enhance your Roblox experience with useful tools and features.",
+  "permissions": [
+    "storage",
+    "notifications",
+    "tabs",
+    "cookies"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.roblox.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
